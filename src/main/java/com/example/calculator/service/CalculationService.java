@@ -17,5 +17,4 @@ public class CalculationService {
         return operationRegistry.calc(calculationModel.getFirstValue(),
                 calculationModel.getSecondValue(), calculationModel.getOperation());
     }
-
 }
