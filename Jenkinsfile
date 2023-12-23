@@ -12,9 +12,9 @@ pipeline {
  }
 
  post {
-    always {
-        sh 'chmod +x ./gradlew'
-        sh './gradlew clean'
-    }
+        always {
+            sh 'chmod +x ./gradlew'
+            sh './gradlew clean'
+        }
     }
  }
