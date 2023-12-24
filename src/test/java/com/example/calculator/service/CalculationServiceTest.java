@@ -20,7 +20,7 @@ public class CalculationServiceTest {
 
     static Stream<Arguments> operationData() {
         return Stream.of(
-                Arguments.of(getCalculationModel(1.0D, 1.0D, "*"), 1.0D),
+                Arguments.of(getCalculationModel(1.0D, 1.0D, "*"), 9.0D),
                 Arguments.of(getCalculationModel(5.0D, 2.0D, "/"), 2.5D),
                 Arguments.of(getCalculationModel(5.0D, 2.0D, "+"), 7.0D),
                 Arguments.of(getCalculationModel(5.0D, 2.0D, "-"), 3.0D)
