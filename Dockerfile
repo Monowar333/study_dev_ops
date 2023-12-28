@@ -1,4 +1,5 @@
 FROM gradle:8.5.0-jdk17-alpine AS build
+RUN mkdir /app
 WORKDIR /app
 COPY --chown=gradle:gradle study_dev_ops_labs /app/study_dev_ops_labs
 WORKDIR /app/producer
@@ -8,7 +9,7 @@ FROM openjdk:17-jdk-slim
 
 EXPOSE 9099
 
-RUN mkdir /app
+
 
 COPY --from=build /home/gradle/src/build/libs/*.jar /app/study_dev_ops_labs.jar
 
