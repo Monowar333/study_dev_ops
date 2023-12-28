@@ -1,6 +1,6 @@
 FROM gradle:8.5.0-jdk17-alpine AS build
-COPY --chown=gradle:gradle src /home/study_dev_ops_labs/src
-WORKDIR /home/study_dev_ops_labs
+WORKDIR /app
+COPY --from=0 /app/study_dev_ops_labs /app
 RUN gradle build --no-daemon
 
 FROM openjdk:17-jdk-slim
